@@ -75,15 +75,13 @@ export default function renderExpenses() {
           updateExpense(id, updated);
           formContainer.style.display = 'none';
           renderExpenses();
-        });
-        // Pre-fill form
+        }, expense);
         formContainer.style.display = 'block';
-        setTimeout(() => {
-          document.getElementById('amount').value = expense.amount;
-          document.getElementById('category').value = expense.category;
-          document.getElementById('date').value = expense.date;
-          document.getElementById('note').value = expense.note || '';
-        }, 0);
+        setupExpenseForm((updated) => {
+          updateExpense(id, updated);
+          formContainer.style.display = 'none';
+          renderExpenses();
+        }, expense);
       });
     });
   });
