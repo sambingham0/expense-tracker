@@ -1,0 +1,253 @@
+/* Expense section separator style */
+.expense-sep {
+  color: #b5b5b5;
+  margin: 0 0.75rem;
+  font-weight: bold;
+}
+/* Expense list layout: push action buttons to the right */
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.expense-list .card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+.expense-list .expense-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+/* Reports table column spacing */
+.auto-width {
+  width: auto;
+}
+.cat-col, .month-col {
+  padding-right: 2.5rem;
+}
+.spent-budget-col, .total-col {
+  padding-left: 2.5rem;
+}
+.budget-summary-large {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+/* Hide expense form by default */
+.expense-form-hidden {
+  display: none;
+}
+/* Over budget warning style */
+.over-budget {
+  color: var(--secondary-accent);
+  font-weight: bold;
+}
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+ 
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  color: #22223b;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header, footer {
+  background: #4f46e5;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(79,70,229,0.08);
+}
+
+header h1, footer h2, footer p {
+  margin: 0.5rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #6366f1;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover, nav a.active {
+  color: #fbbf24;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  color: #3730a3;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #f1f5f9;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(55,48,163,0.06);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(55,48,163,0.13);
+}
+
+.button, button, input[type="submit"] {
+  background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.button:hover, button:hover, input[type="submit"]:hover {
+  background: linear-gradient(90deg, #818cf8 0%, #6366f1 100%);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.16);
+}
+
+form {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #3730a3;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #c7d2fe;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+/* Increased spacing for dashboard tables */
+.table th, .table td {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #e0e7ff;
+  text-align: left;
+}
+
+/* More spacing for specific dashboard tables */
+.cat-breakdown th, .cat-breakdown td,
+.recent-expenses th, .recent-expenses td {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+
+.table th {
+  background: #6366f1;
+  color: #fff;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.alert {
+  background: #fbbf24;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  main {
+    padding: 1rem;
+  }
+  .dashboard-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header, footer, nav {
+    padding: 1rem 0.25rem;
+  }
+  main {
+    padding: 0.5rem;
+  }
+  .card, form {
+    padding: 1rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #e0e7ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 5px;
+}
