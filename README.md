@@ -22,6 +22,3 @@ This is a web application for managing expenses, generating reports, and visuali
 - Dashboard with charts
 - Reports generation
 - Settings management
-
-## License
-This project is for educational purposes.
